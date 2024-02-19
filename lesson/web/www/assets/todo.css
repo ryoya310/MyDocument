@@ -1,0 +1,199 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f2f0f0;
+}
+
+* {
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+header {
+  background: #ea8108;
+  color: #fff;
+  padding: 0 12px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  border-bottom: 2px solid #ea8108;
+}
+
+.todo-form {
+  margin: 10px auto;
+  padding: 0 12px;
+}
+
+.todo-form form > div {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  margin: 10px auto;
+}
+
+.todo-form form > div > label {
+  display: block;
+  width: 100px;
+  color: #543ce2;
+}
+
+.todo-form form > div > div {
+  width: calc(100% - 100px);
+}
+
+.todo-form form > div input,
+.todo-form form > div textarea {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.todo-form form > div textarea {
+  height: 120px;
+}
+
+.todo-list {
+  margin: 10px auto;
+  padding: 0 12px;
+}
+
+.todo-list ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+.todo-list ul li {
+  position: relative;
+  padding: 12px 18px;
+  margin-bottom: 20px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,.08);
+  transition: .3s;
+  border-radius: 10px;
+  background: #fff;
+  line-height: 2em;
+  cursor: pointer;
+}
+
+.todo-list ul li .action {
+  padding-top: 8px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-list ul li .action button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 8px;
+}
+
+.todo-list ul li .action .delete {
+  background: #aaa;
+  color: #fff;
+}
+
+.todo-list ul li:hover {
+  box-shadow: 2px 4px 16px rgba(0,0,0,.16);
+}
+
+.buttons {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.btn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px auto;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-1 {
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.btn-hover.color-2 {
+  background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+.btn-hover.color-3 {
+  background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+.btn-hover.color-4 {
+  background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+  box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+.btn-hover.color-5 {
+  background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+.btn-hover.color-6 {
+  background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+  box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+.btn-hover.color-7 {
+  background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+.btn-hover.color-8 {
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.btn-hover.color-9 {
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+.btn-hover.color-10 {
+  background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+  box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+.btn-hover.color-11 {
+  background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+
+.fade-in {
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
