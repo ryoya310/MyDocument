@@ -21,8 +21,8 @@ docker exec <CONTAINER_NAME>-certbot certbot renew
 ## 証明書を使っているWEBサーバーコンテナ [nginx]
 docker exec <CONTAINER_NAME>-nginx nginx -s reload
 
-## 証明書を使っているWEBサーバーコンテナ [postfix]
+## 証明書を使っているメールサーバーコンテナ [postfix]
 docker restart <CONTAINER_NAME>-postfix
 
-## 証明書を使っているWEBサーバーコンテナ [dovecot]
+## 証明書を使っているメールサーバーコンテナ [dovecot]
 docker restart <CONTAINER_NAME>-dovecot
