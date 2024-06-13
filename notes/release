@@ -1,0 +1,27 @@
+現地PCセットアップ
+
+必須アプリ
+1. Docker
+2. Docker DeskTop
+3. Ubuntu 20.04
+4. Workbench
+5. Chrome
+
+あれば便利なアプリ
+1. VsCode [Editor]
+
+やること
+1. 各アプリをインストール
+2. 開発データを移動させる
+3. PCのIPを固定する
+4. 固定したIPでシステムを変える
+5. Dockerを起動し、移動させた開発データをコンポーズする
+[$ docker compose up -d --build]
+
+確認事項
+・タスクマネージャーで仮想化が有効かどうかを確認
+・Windowsの機能の有効化または無効化で、下記がチェックが入っているかを確認
+  ┗ Hyper-V
+  ┗ Linux用Windowsサブシステム
+  ┗ 仮想マシン プラットフォーム
+・WSL2環境であること

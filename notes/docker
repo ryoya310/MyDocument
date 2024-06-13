@@ -1,12 +1,28 @@
 # コンテナ起動
 docker compose up -d --build
-# すべてのコンテナを停止
+
+# コンテナ、イメージ、ボリューム、ネットワークをすべて削除
 docker stop $(docker ps -aq)
-# すべてのコンテナを削除
 docker rm $(docker ps -aq)
-# すべてのイメージを削除
 docker rmi -f $(docker images -q)
-# すべての未使用ボリュームを削除
 docker volume prune -f
-# すべての未使用ネットワークを削除
 docker network prune -f
+
+# Dockerアップデート後
+wsl --shutdown
+wsl -d Ubuntu
+
+# 証明書手動発行する場合
+<CONTAINER_NAME> = '各プロジェクトの名前'
+
+## 証明書を取得するコンテナ [certbot]
+docker exec <CONTAINER_NAME>-certbot certbot renew
+
+## 証明書を使っているWEBサーバーコンテナ [nginx]
+docker exec <CONTAINER_NAME>-nginx nginx -s reload
+
+## 証明書を使っているWEBサーバーコンテナ [postfix]
+docker restart <CONTAINER_NAME>-postfix
+
+## 証明書を使っているWEBサーバーコンテナ [dovecot]
+docker restart <CONTAINER_NAME>-dovecot
