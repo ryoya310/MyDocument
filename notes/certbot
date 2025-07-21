@@ -1,0 +1,18 @@
+/nginx/Dockerfile
+このファイルの中に「初回のみ」のコマンドがあり、コメントアウトされていれば、解除※1
+
+サーバーコントロールパネルでDNS設定
+wwwあり、なしの2つAレコードで登録
+
+https://toolbox.googleapps.com/apps/dig/
+登録後DNSが浸透しているか確認(時間かかるかもしれない)
+
+浸透後
+Certbotコンテナに入り、DNS認証をする
+$ docker exec -it ***-web-certbot /bin/sh
+$ mkdir -p /var/www/certbot
+$ cd /
+$ ./certbot.sh
+
+SSL用Nginxに切り替え
+※1で解除したコメントアウトを再度コメントアウト、もしくは削除でも可

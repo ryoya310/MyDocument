@@ -1,0 +1,8 @@
+my.cnf mysqlが完全に起動後に実行する
+docker exec -it {コンテナ名}-db /bin/sh /usr/local/bin/update-mycnf.sh
+
+mysql-store ルート権限に直す必要がある可能性がある
+sudo chown root:root ./mysql-store
+
+SSH接続できないときに以前の接続が残っている可能性
+cat ~/.ssh/known_hosts

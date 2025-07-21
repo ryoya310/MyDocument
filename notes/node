@@ -1,0 +1,19 @@
+NodeJS更新
+※既存のパッケージ、プラグインが動かない可能性あり
+
+Node公式から推奨版 (LTS)をダウンロード
+https://nodejs.org/en
+
+node -v
+で、バージョン確認
+
+Remove-Item -Recurse -Force node_modules
+Remove-Item -Force package-lock.json
+npm install
+
+npm install -g npm-check-updates
+ncu -u
+npm install --legacy-peer-deps
+
+
+pnpm create vite@latest front --template react
